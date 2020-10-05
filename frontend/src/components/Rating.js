@@ -64,18 +64,6 @@ const Rating = ({ value, text, color }) => {
           }
         ></i>
       </span>
-      <span>
-        <i
-          style={{ color }}
-          className={
-            value >= 5
-              ? 'fas fa-star'
-              : value >= 4.5
-              ? 'fas fa-star-half-alt'
-              : 'far fa-star'
-          }
-        ></i>
-      </span>
       <span> {text && text}</span>
     </div>
   )
@@ -86,7 +74,7 @@ Rating.defaultProps = {
 }
 
 Rating.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.number,
   text: PropTypes.string.isRequired,
   color: PropTypes.string,
 }
